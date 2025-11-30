@@ -212,12 +212,6 @@ codigo = [
     '        Finmientras',
     '    Finmientras',
     'Finmientras',
-
-    'mientras i < 5  hacer',
-    '    Imprimir(nombre);',
-    '   i = i + 1 hacer',
-
-    'Finmientras',
     '',
     'mientras x < 10 or y > 20 hacer',
     '    Imprimir("Nivel 1: alguna condición combinada se cumple");',
@@ -229,3 +223,4 @@ codigo = [
 
 # Inicia la interpretación del programa
 interpretar(codigo)
+
