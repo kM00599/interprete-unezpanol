@@ -30,18 +30,18 @@ jobs:
 
     - name: Run Pylint (ignore failures)
       run: |
-        if [ -f interpreter.py ]; then
-          pylint interpreter.py || true
+        if [ -f "UNEZPAÑOL.py" ]; then
+          pylint "UNEZPAÑOL.py" || true
         else
           echo "No interpreter.py found, skipping pylint"
         fi
 
     - name: Run Mypy (ignore failures)
       run: |
-        if [ -f interpreter.py ]; then
-          mypy interpreter.py --strict || true
+        if [ -f "UNEZPAÑOL.py" ]; then
+          mypy "UNEZPAÑOL.py" --strict || true
         else
-          echo "No interpreter.py found, skipping mypy"
+          echo "No UNEZPAÑOL.py found, skipping mypy"
         fi
 
     - name: Run Unit Tests + Coverage
