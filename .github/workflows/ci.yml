@@ -33,7 +33,7 @@ jobs:
         if [ -f "UNEZPAÑOL.py" ]; then
           pylint "UNEZPAÑOL.py" || true
         else
-          echo "No interpreter.py found, skipping pylint"
+          echo "No UNEZPAÑOL.py found, skipping pylint"
         fi
 
     - name: Run Mypy (ignore failures)
@@ -48,3 +48,14 @@ jobs:
       run: |
         coverage run -m pytest || true
         coverage report || true
+
+    - name: Generate coverage report
+      run: coverage html
+
+    - name: Upload coverage report
+      uses: actions/upload-artifact@v4
+      with:
+        name: coverage-report
+        path: htmlcov/
+
+
